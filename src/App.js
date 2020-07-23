@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import avatarSrc from './assets/img/user.png';
-import { fetchUsers } from './services';
+import './index.scss';
 import { monthOptions } from './config';
+import { fetchUsers } from './services';
+import avatarSrc from './assets/img/user.png';
+import Button from './components/button/Button';
 
-function App() {
+const App = () => {
   const [users, setUsers] = useState({});
   const [activeMonth, setActiveMonth] = useState(undefined);
 
@@ -17,25 +19,29 @@ function App() {
     ? monthOptions(users)
     : [];
 
-  console.log('users', users);
-  console.log('month options', Object.keys(users).length && monthOptions(users));
-
   return (
     <div className="container" >
       <div className="row">
         <div className="col">
           {months.map(({ value, text, color }) => (
-            <div
+            <Button
+              color={color}
               key={text}
-              style={{ color }}
-              className="pointer"
+              text={text}
+              className="btn-sm shadow m-1"
               onMouseEnter={() => setActiveMonth(value)}
               onMouseLeave={() => setActiveMonth(undefined)}
-            >
-              {text}
-            </div>
+            />
           ))}
-          {(activeMonth >= 0) && users[activeMonth].map(user => <div>{user.firstName} {user.lastName}</div>)}
+          {(activeMonth >= 0) && (
+            <ol>
+              {users[activeMonth].map(({ id, firstName, lastName }) => (
+                <li key={id}>
+                  {firstName} {lastName}
+                </li>
+              ))}
+            </ol>
+          )}
         </div>
       </div>
     </div>

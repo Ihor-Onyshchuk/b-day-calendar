@@ -25,6 +25,7 @@ const StyledButton = styled.button`
 
 const Button = ({
   text,
+  value,
   color,
   className,
   onMouseEnter,
@@ -33,8 +34,8 @@ const Button = ({
     <StyledButton
       color={color}
       className={className}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      onMouseEnter={() => onMouseEnter(value)}
+      onMouseLeave={() => onMouseLeave(undefined)}
     >
       {text}
     </StyledButton>

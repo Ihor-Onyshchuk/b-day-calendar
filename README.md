@@ -20,4 +20,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 > Open [Live demo](https://ihor-onyshchuk.github.io/b-day-calendar/)
 
-![cover for app](https://github.com/Ihor-Onyshchuk/b-day-calendar//blob/master/preview.png 'preview')
+![cover for app](https://github.com/Ihor-Onyshchuk/b-day-calendar/blob/develop/preview.png 'preview')

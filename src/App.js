@@ -22,7 +22,7 @@ const App = () => {
     <div className="container" >
       <div className="row">
         <div className="col">
-          <section className="my-3">
+          <section className="">
             {hasData() && (
               <MonthsList
                 months={monthOptions(users)}
@@ -31,6 +31,8 @@ const App = () => {
               />
             )
             }
+          </section>
+          <section className="d-flex flex-wrap">
             {(activeMonth >= 0) && (
               <ActiveUsersList
                 users={users}

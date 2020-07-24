@@ -20,11 +20,13 @@ const App = () => {
 
   return (
     <div className="container" >
-      <h1 className="my-2">User Info</h1>
+      <h1 className="my-2">
+        The Birthdays calendar
+      </h1>
       <hr />
       <div className="row">
         <div className="col">
-          <h2>Calendar of users birthday</h2>
+          <h2>Months list</h2>
           <section className="d-flex flex-wrap justify-content-between my-3">
             {hasData() && (
               <MonthsList
@@ -34,7 +36,7 @@ const App = () => {
               />
             )}
           </section>
-          <h2>Users List</h2>
+          <h2>Friends List</h2>
           <section className="d-flex flex-wrap my-3">
             {(activeMonth >= 0) && (
               <ActiveUsersList

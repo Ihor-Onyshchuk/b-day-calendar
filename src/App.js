@@ -4,9 +4,9 @@ import { monthOptions } from './config';
 import { fetchUsers } from './services';
 import MonthsList from './components/MonthsList/MonthsList';
 import ActiveUsersList from './components/ActiveUsersList/ActiveUsersList';
+import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator';
 
 import './index.scss';
-import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator';
 
 const App = () => {
   const [users, setUsers] = useState({});

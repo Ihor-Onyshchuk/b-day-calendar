@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/b-day-calendar/static/css/main.91ca8116.chunk.css",
+    "main.js": "/b-day-calendar/static/js/main.bcdaf7eb.chunk.js",
+    "main.js.map": "/b-day-calendar/static/js/main.bcdaf7eb.chunk.js.map",
+    "runtime-main.js": "/b-day-calendar/static/js/runtime-main.c4427cba.js",
+    "runtime-main.js.map": "/b-day-calendar/static/js/runtime-main.c4427cba.js.map",
+    "static/js/2.91e931bc.chunk.js": "/b-day-calendar/static/js/2.91e931bc.chunk.js",
+    "static/js/2.91e931bc.chunk.js.map": "/b-day-calendar/static/js/2.91e931bc.chunk.js.map",
+    "index.html": "/b-day-calendar/index.html",
+    "precache-manifest.2dc22f755d8b8b0a51976133ba221bf9.js": "/b-day-calendar/precache-manifest.2dc22f755d8b8b0a51976133ba221bf9.js",
+    "service-worker.js": "/b-day-calendar/service-worker.js",
+    "static/css/main.91ca8116.chunk.css.map": "/b-day-calendar/static/css/main.91ca8116.chunk.css.map",
+    "static/js/2.91e931bc.chunk.js.LICENSE.txt": "/b-day-calendar/static/js/2.91e931bc.chunk.js.LICENSE.txt",
+    "static/media/load-indicator.gif": "/b-day-calendar/static/media/load-indicator.bd85ac8c.gif",
+    "static/media/user.png": "/b-day-calendar/static/media/user.16fce02f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c4427cba.js",
+    "static/js/2.91e931bc.chunk.js",
+    "static/css/main.91ca8116.chunk.css",
+    "static/js/main.bcdaf7eb.chunk.js"
+  ]
+}

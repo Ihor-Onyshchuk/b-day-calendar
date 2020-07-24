@@ -32,8 +32,7 @@ const App = () => {
                 onMouseEnter={setActiveMonth}
                 onMouseLeave={setActiveMonth}
               />
-            )
-            }
+            )}
           </section>
           <h2>Users List</h2>
           <section className="d-flex flex-wrap my-3">
@@ -47,7 +46,7 @@ const App = () => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default App;

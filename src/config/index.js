@@ -19,7 +19,7 @@ const monthsWithColor = (months) => (usersByMonth) => {
     if (length > 2 && length < 7) return '#007bff';
     if (length > 6 && length < 11) return '#20c997';
     return '#e11313';
-  }
+  };
 
   return months.map(month => ({
     ...month,

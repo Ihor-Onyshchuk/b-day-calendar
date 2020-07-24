@@ -9,7 +9,6 @@ const MonthsList = ({ months, ...otherProps }) => (
           key={month.text}
           {...month}
           {...otherProps}
-          className=""
         />
       ))
     }

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import './index.scss';
 import { monthOptions } from './config';
 import { fetchUsers } from './services';
-import Button from './components/Button/Button.js';
-import ActiveUsersList from './components/ActiveUsersList/ActiveUsersList';
 import MonthsList from './components/MonthsList/MonthsList';
+import ActiveUsersList from './components/ActiveUsersList/ActiveUsersList';
+
+import './index.scss';
 
 const App = () => {
   const [users, setUsers] = useState({});
@@ -20,9 +20,12 @@ const App = () => {
 
   return (
     <div className="container" >
+      <h1 className="my-2">User Info</h1>
+      <hr />
       <div className="row">
         <div className="col">
-          <section className="">
+          <h2>Calendar of users birthday</h2>
+          <section className="d-flex flex-wrap justify-content-between my-3">
             {hasData() && (
               <MonthsList
                 months={monthOptions(users)}
@@ -32,7 +35,8 @@ const App = () => {
             )
             }
           </section>
-          <section className="d-flex flex-wrap">
+          <h2>Users List</h2>
+          <section className="d-flex flex-wrap my-3">
             {(activeMonth >= 0) && (
               <ActiveUsersList
                 users={users}
@@ -43,7 +47,7 @@ const App = () => {
         </div>
       </div>
     </div>
-  );
-}
+  )
+};
 
 export default App;

@@ -15,10 +15,10 @@ export const monthList = [
 
 const monthsWithColor = (months) => (usersByMonth) => {
   const getColorByLength = (length) => {
-    if (length < 3) return 'grey';
-    if (length > 2 && length < 7) return 'blue';
-    if (length > 6 && length < 11) return 'green';
-    return 'red';
+    if (length < 3) return '#6c757d';
+    if (length > 2 && length < 7) return '#007bff';
+    if (length > 6 && length < 11) return '#20c997';
+    return '#bf081a';
   }
 
   return months.map(month => ({

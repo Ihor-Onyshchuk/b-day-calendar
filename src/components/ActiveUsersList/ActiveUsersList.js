@@ -30,7 +30,7 @@ const StyledUserCard = styled.div`
 
 const ActiveUsersList = ({ users, activeMonth }) => (
   <>
-    {users[activeMonth].map(({ id, firstName, lastName }) => (
+    {users[activeMonth].map(({ id, firstName, lastName, dob }) => (
       <StyledUserCard key={id}>
         <img
           src={avatarSrc}
@@ -38,7 +38,12 @@ const ActiveUsersList = ({ users, activeMonth }) => (
           alt="user-avatar"
         />
         <div className="card-text">
-          {firstName} {lastName}
+          <div>
+            {firstName} {lastName}
+          </div>
+          <div>
+            day of birth: {new Date(dob).getDate()}
+          </div>
         </div>
       </StyledUserCard>
     ))}

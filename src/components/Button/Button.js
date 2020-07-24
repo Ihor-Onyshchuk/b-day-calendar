@@ -42,7 +42,7 @@ const Button = ({
       color={color}
       className={className}
       onMouseEnter={() => onMouseEnter(value)}
-      onMouseLeave={() => { }/*onMouseLeave(undefined)*/}
+      onMouseLeave={() => onMouseLeave(undefined)}
     >
       {text}
     </StyledButton>

@@ -4,16 +4,19 @@ import { monthOptions } from './config';
 import { fetchUsers } from './services';
 import MonthsList from './components/MonthsList/MonthsList';
 import ActiveUsersList from './components/ActiveUsersList/ActiveUsersList';
+import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator';
 
 import './index.scss';
 
 const App = () => {
   const [users, setUsers] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   const [activeMonth, setActiveMonth] = useState(undefined);
 
   useEffect(() => {
     fetchUsers()
       .then(users => setUsers(users))
+      .then(() => setIsLoading(false))
   }, []);
 
   const hasData = () => !!Object.keys(users).length;
@@ -28,6 +31,7 @@ const App = () => {
         <div className="col">
           <h2>Months list</h2>
           <section className="d-flex flex-wrap justify-content-between my-3">
+            {isLoading && <LoadingIndicator />}
             {hasData() && (
               <MonthsList
                 months={monthOptions(users)}
